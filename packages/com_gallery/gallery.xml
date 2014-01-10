@@ -6,10 +6,10 @@
 	<name>com_gallery</name>
 	<author>Bruno Batista</author>
 	<creationDate>Sep 2013</creationDate>
-	<copyright>Copyright (C) 2013 CTIS IT Services. All rights reserved.</copyright>
-	<license>Commercial License</license>
-	<authorEmail>bruno.batista@ctis.com.br</authorEmail>
-	<authorUrl>http://www.ctis.com.br</authorUrl>
+	<copyright>Copyright (C) 2013 AtomTech, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>bruno@atomtech.com.br</authorEmail>
+	<authorUrl>http://www.atomtech.com.br</authorUrl>
 	<version>1.0</version>
 	<description>COM_GALLERY_XML_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>

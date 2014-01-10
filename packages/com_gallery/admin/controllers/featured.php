@@ -3,9 +3,9 @@
  * @package     Gallery
  * @subpackage  com_gallery
  *
- * @author      Bruno Batista <bruno.batista@ctis.com.br>
- * @copyright   Copyright (C) 2013 CTIS IT Services. All rights reserved.
- * @license     Commercial License
+ * @author      Bruno Batista <bruno@atomtech.com.br>
+ * @copyright   Copyright (C) 2013 AtomTech, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 // No direct access.
@@ -19,7 +19,7 @@ require_once __DIR__ . '/albums.php';
  *
  * @package     Gallery
  * @subpackage  com_gallery
- * @author      Bruno Batista <bruno.batista@ctis.com.br>
+ * @author      Bruno Batista <bruno@atomtech.com.br>
  * @since       3.2
  */
 class GalleryControllerFeatured extends GalleryControllerAlbums
