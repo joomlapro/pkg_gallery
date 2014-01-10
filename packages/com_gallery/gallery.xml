@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	version="3.2"
+	type="component"
+	method="upgrade">
+	<name>com_gallery</name>
+	<author>Bruno Batista</author>
+	<creationDate>Sep 2013</creationDate>
+	<copyright>Copyright (C) 2013 CTIS IT Services. All rights reserved.</copyright>
+	<license>Commercial License</license>
+	<authorEmail>bruno.batista@ctis.com.br</authorEmail>
+	<authorUrl>http://www.ctis.com.br</authorUrl>
+	<version>1.0</version>
+	<description>COM_GALLERY_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<!-- Runs on install. -->
+	<install>
+		<sql>
+			<file
+				driver="mysql"
+				charset="utf8">sql/install.mysql.utf8.sql</file>
+			<file
+				driver="postgresql"
+				charset="utf8">sql/install.postgresql.utf8.sql</file>
+		</sql>
+	</install>
+	<!-- Runs on uninstall. -->
+	<uninstall>
+		<sql>
+			<file
+				driver="mysql"
+				charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+			<file
+				driver="postgresql"
+				charset="utf8">sql/uninstall.postgresql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+			<schemapath type="postgresql">sql/updates/postgresql</schemapath>
+		</schemas>
+	</update>
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>metadata.xml</filename>
+		<filename>router.php</filename>
+		<filename>gallery.php</filename>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_gallery.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.com_gallery.ini</language>
+	</languages>
+	<media
+		destination="com_gallery"
+		folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+	<administration>
+		<menu img="class:gallery">com_gallery</menu>
+		<submenu>
+			<!--
+				Note that all & must be escaped to &amp;
+				for the file to be valid XML and be parsed by the installer.
+			-->
+			<menu
+				link="option=com_gallery&amp;view=albums"
+				view="albums"
+				img="class:gallery-albums"
+				alt="Gallery/Albums">com_gallery_albums</menu>
+			<menu
+				link="option=com_categories&amp;extension=com_gallery"
+				view="categories"
+				img="class:gallery-cat"
+				alt="Gallery/Categories">com_gallery_categories</menu>
+			<menu
+				link="option=com_gallery&amp;view=featured"
+				view="featured"
+				img="class:gallery-featured"
+				alt="Gallery/Featured">com_gallery_featured</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>gallery.php</filename>
+			<folder>controllers</folder>
+			<folder>help</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_gallery.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_gallery.sys.ini</language>
+			<language tag="pt-BR">language/pt-BR/pt-BR.com_gallery.ini</language>
+			<language tag="pt-BR">language/pt-BR/pt-BR.com_gallery.sys.ini</language>
+		</languages>
+	</administration>
+	<!--
+		These are used for backups to determine which tables to backup;
+		ones marked optional are only backed up if they exist.
+	-->
+	<tables>
+		<table>#__gallery_albums</table>
+		<table>#__gallery_albums_frontpage</table>
+		<table>#__gallery_albums_pictures</table>
+	</tables>
+</extension>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	version="3.2"
+	type="package"
+	method="upgrade">
+	<name>Gallery Package</name>
+	<packagename>gallery</packagename>
+	<version>3.2.0</version>
+	<description>Gallery package to combine multiple extensions.</description>
+	<creationDate>Jan 2014</creationDate>
+	<copyright>Copyright (C) 2014 CTIS IT Services. All rights reserved.</copyright>
+	<license>Commercial License</license>
+	<author>Bruno Batista</author>
+	<authorEmail>bruno.batista@ctis.com.br</authorEmail>
+	<authorUrl>http://www.ctis.com.br</authorUrl>
+	<packager>Bruno Batista</packager>
+	<packagerurl>http://www.ctis.com.br</packagerurl>
+	<update>http://www.ctis.com.br/update</update>
+	<scriptfile />
+	<files folder="packages">
+		<file
+			type="component"
+			id="com_gallery">com_gallery</file>
+	</files>
+</extension>
